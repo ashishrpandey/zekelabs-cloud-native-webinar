@@ -1,7 +1,6 @@
 # Kiali
 
-Grafana is open source visualization and analytics software tool to turn your time-series database (TSDB) data into beautiful graphs and visualizations.
-It allows you to query, visualize, alert on, and explore your metrics no matter where they are stored.
+Kiali provides observability into the Service Mesh. Kiali helps you define, validate, and observe your Istio service mesh. It helps you to understand the structure of your service mesh by inferring the topology, and also provides information about the health of your service mesh. It can also be used to configure the service mesh from the browser.
 
 ## Kiali Dashboard
 
