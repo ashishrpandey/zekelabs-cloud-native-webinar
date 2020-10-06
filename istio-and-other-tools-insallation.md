@@ -18,8 +18,9 @@
 ## Install istio with demo profile 
 - Make sure your server has enough CPU/Mem resources.
 - Demo profile makes sure that it installs grafana, prometheus Kiali and other services
+
      
-     istioctl manifest apply --set profile=demo
+        istioctl manifest apply --set profile=demo
 
      
 ## Enable Sidecar injection
