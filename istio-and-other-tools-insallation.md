@@ -1,7 +1,6 @@
 
 ## Download Istio
 
-    curl -L https://istio.io/downloadIstio | sh -
     wget https://github.com/istio/istio/releases/download/1.5.2/istio-1.5.2-linux.tar.gz
     cd istio-1.5.2
     export PATH=$PWD/bin:$PATH
