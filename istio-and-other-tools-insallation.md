@@ -50,7 +50,7 @@ This should give you an output containing "<title>Simple Bookstore App</title>"
       kubectl get svc istio-ingressgateway -n istio-system
       kubectl edit svc istio-ingressgateway -n istio-system
      
-- Change the service type from <LoadBalancer> to <NodePort>
+- Change the service type from LoadBalancer to NodePort
 - Then Find the nodeport corresponding to http2 
      
       kubectl get svc istio-ingressgateway -n istio-system
@@ -65,4 +65,4 @@ The command above will show the value of the nodeport assigned
     
  - You shall see a book-info website 
  
-   
+ - Access individual tools (Prometheus, Grafana, Kiali, Jaeger) on separate browser-tabs. 
