@@ -3,6 +3,7 @@
 
     wget https://github.com/istio/istio/releases/download/1.5.2/istio-1.5.2-linux.tar.gz
     cd istio-1.5.2
+    tar -zxvf istio-1.5.2-linux.tar.gz
     export PATH=$PWD/bin:$PATH
 
 
@@ -14,12 +15,16 @@
      istioctl profile dump default >default.txt
      vim -d demo.txt default.txt
 
-## Install istio with demo profile (Make sure your server has enough CPU/Mem resources , demo profile makes sure that it installs grafana, prometheus Kiali and other services)
+## Install istio with demo profile 
+- Make sure your server has enough CPU/Mem resources.
+- Demo profile makes sure that it installs grafana, prometheus Kiali and other services
      
      istioctl manifest apply --set profile=demo
 
      
-## Add a namespace label to instruct Istio to automatically inject Envoy sidecar proxies when you deploy your application later:
+## Enable Sidecar injection
+
+Add a namespace label to instruct Istio to automatically inject Envoy sidecar proxies when you deploy your application later:
 
     kubectl label namespace default istio-injection=enabled
 
@@ -29,7 +34,9 @@
     kubectl get services
     kubectl get deploy
     
-## Wait for 5 minutes and then Make sure it is working fine 
+## Check the deployments 
+
+Wait for 5 minutes and then Make sure it is working fine 
 
     kubectl get po
     kubectl get ep    
